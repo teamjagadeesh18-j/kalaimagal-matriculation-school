@@ -2,7 +2,7 @@
 
 import React, { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
-import { GraduationCap, ArrowRight, Star, X } from "lucide-react";
+import { GraduationCap, ArrowRight, Star, X, Menu, ChevronRight } from "lucide-react";
 import { FocusReveal } from "@/components/ui/focus-reveal";
 import StarfieldButton from "@/components/ui/starfield-button";
 
@@ -25,20 +25,29 @@ export function AnnouncementBar() {
 }
 
 export function SpatialHeader() {
+  const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
+
   return (
-    <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-[#e5e7eb] font-body">
-      <div className="max-w-[1200px] mx-auto px-3 sm:px-6 min-h-[60px] sm:h-16 flex items-center justify-between gap-2 text-sm text-[#030712]">
-        <a href="/" className="hover:opacity-90 transition-opacity min-w-0 shrink"><div className="flex items-center gap-2.5 min-w-0">
-          <div className="w-9 h-9 rounded-xl bg-[#5727e7] text-white flex items-center justify-center font-bold font-heading shadow-sm">
-            K
+    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-[#e5e7eb] font-body">
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-3 text-sm text-[#030712]">
+        <a href="/" className="hover:opacity-90 transition-opacity min-w-0 shrink">
+          <div className="flex items-center gap-3 min-w-0">
+            <div className="w-9 h-9 rounded-xl bg-[#5727e7] text-white flex items-center justify-center font-bold font-heading shadow-sm shrink-0">
+              K
+            </div>
+            <div className="min-w-0">
+              <span className="sm:hidden font-bold text-sm text-[#030712] font-heading tracking-tight block whitespace-nowrap">
+                Kalaimagal Matric School
+              </span>
+              <span className="hidden sm:block font-bold text-base text-[#030712] font-heading tracking-tight whitespace-nowrap">
+                Kalaimagal Matriculation School
+              </span>
+              <span className="text-[11px] text-[#4b5563] block -mt-0.5 font-medium whitespace-nowrap">
+                Matriculation Campus
+              </span>
+            </div>
           </div>
-          <div className="min-w-0">
-            <span className="font-bold text-xs sm:text-base text-[#030712] font-heading tracking-tight block truncate max-w-[160px] xs:max-w-[240px] sm:max-w-none">
-              Kalaimagal Matriculation School
-            </span>
-            <span className="text-[10px] sm:text-[11px] text-[#4b5563] block -mt-0.5 font-medium truncate">Matriculation Campus</span>
-          </div>
-        </div></a>
+        </a>
 
         <nav className="hidden md:flex items-center gap-6 font-medium text-xs lg:text-sm">
           <a href="/about" className="whitespace-nowrap hover:text-[#5727e7] transition-colors">About Us</a>
@@ -49,18 +58,97 @@ export function SpatialHeader() {
           <a href="/contact" className="whitespace-nowrap hover:text-[#5727e7] transition-colors">Connect</a>
         </nav>
 
-        <div className="flex items-center gap-2 shrink-0">
-          <StarfieldButton
-            label="Apply Now"
-            link="/apply"
-            padding="6px 14px 6px 14px"
-            font={{ fontSize: 14, fontWeight: 700 }}
-            colors={{ fill: "#5727e7", textColor: "#ffffff" }}
-            stroke={{ color: "#8169ff", count: 1, size: 70, speed: 50 }}
-            pixel={{ color: "#8169ff", size: 3, density: 50, brightness: 100 }}
-          />
+        <div className="flex items-center gap-3 shrink-0">
+          <div className="hidden sm:block">
+            <StarfieldButton
+              label="Apply Now"
+              link="/apply"
+              padding="7px 16px 7px 16px"
+              font={{ fontSize: 14, fontWeight: 700 }}
+              colors={{ fill: "#5727e7", textColor: "#ffffff" }}
+              stroke={{ color: "#8169ff", count: 1, size: 70, speed: 50 }}
+              pixel={{ color: "#8169ff", size: 3, density: 50, brightness: 100 }}
+            />
+          </div>
+
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="md:hidden p-2 rounded-lg text-[#030712] hover:bg-slate-100 transition-colors focus:outline-none"
+            aria-label="Toggle Menu"
+          >
+            {mobileMenuOpen ? (
+              <X className="w-6 h-6 text-[#5727e7]" />
+            ) : (
+              <Menu className="w-6 h-6 text-[#030712]" />
+            )}
+          </button>
         </div>
       </div>
+
+      {mobileMenuOpen && (
+        <div className="md:hidden bg-white border-b border-[#e5e7eb] px-6 py-5 shadow-xl animate-in slide-in-from-top duration-200">
+          <nav className="flex flex-col space-y-3 font-medium text-sm text-[#030712] font-body">
+            <a 
+              href="/about" 
+              onClick={() => setMobileMenuOpen(false)}
+              className="py-2.5 border-b border-slate-100 hover:text-[#5727e7] transition-colors flex items-center justify-between"
+            >
+              <span>About Us</span>
+              <ChevronRight className="w-4 h-4 text-slate-400" />
+            </a>
+            <a 
+              href="/academics" 
+              onClick={() => setMobileMenuOpen(false)}
+              className="py-2.5 border-b border-slate-100 hover:text-[#5727e7] transition-colors flex items-center justify-between"
+            >
+              <span>Curriculum</span>
+              <ChevronRight className="w-4 h-4 text-slate-400" />
+            </a>
+            <a 
+              href="/facilities" 
+              onClick={() => setMobileMenuOpen(false)}
+              className="py-2.5 border-b border-slate-100 hover:text-[#5727e7] transition-colors flex items-center justify-between"
+            >
+              <span>Infrastructure</span>
+              <ChevronRight className="w-4 h-4 text-slate-400" />
+            </a>
+            <a 
+              href="/gallery" 
+              onClick={() => setMobileMenuOpen(false)}
+              className="py-2.5 border-b border-slate-100 hover:text-[#5727e7] transition-colors flex items-center justify-between"
+            >
+              <span>Highlights</span>
+              <ChevronRight className="w-4 h-4 text-slate-400" />
+            </a>
+            <a 
+              href="/#testimonials" 
+              onClick={() => setMobileMenuOpen(false)}
+              className="py-2.5 border-b border-slate-100 hover:text-[#5727e7] transition-colors flex items-center justify-between"
+            >
+              <span>Feedback</span>
+              <ChevronRight className="w-4 h-4 text-slate-400" />
+            </a>
+            <a 
+              href="/contact" 
+              onClick={() => setMobileMenuOpen(false)}
+              className="py-2.5 hover:text-[#5727e7] transition-colors flex items-center justify-between"
+            >
+              <span>Connect</span>
+              <ChevronRight className="w-4 h-4 text-slate-400" />
+            </a>
+            
+            <div className="pt-3 border-t border-slate-200">
+              <a 
+                href="/apply" 
+                onClick={() => setMobileMenuOpen(false)}
+                className="w-full block py-3 bg-[#5727e7] text-white text-center rounded-xl font-semibold shadow-md hover:opacity-95 transition-all"
+              >
+                Apply for Admission 2026-27
+              </a>
+            </div>
+          </nav>
+        </div>
+      )}
     </header>
   );
 }
