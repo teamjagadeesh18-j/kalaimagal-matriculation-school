@@ -1,4 +1,5 @@
 "use client";
+import { TextEffect } from '@/components/core/text-effect';
 
 import React, { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
@@ -301,11 +302,11 @@ export function SpatialHero() {
             className="text-4xl sm:text-5xl lg:text-[60px] font-bold text-[#030712] tracking-tight leading-[1.3] font-heading" 
           />
 
-          <motion.p custom={2} variants={fadeUpVariants as any} initial="hidden" animate="visible"
+          <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} custom={2} variants={fadeUpVariants as any} initial="hidden" animate="visible"
             className="text-base sm:text-lg lg:text-[18px] text-[#4b5563] leading-[1.56] max-w-2xl mx-auto font-body"
           >
             A neighborhood school built on structure and genuine care — helping every student build steady, lasting habits from KG1 through Class 12.
-          </motion.p>
+          </TextEffect>
 
           {/* Primary + Ghost CTA Pair */}
           <motion.div custom={3} variants={fadeUpVariants as any} initial="hidden" animate="visible" className="flex flex-wrap items-center justify-center gap-4 pt-4 font-body">
@@ -366,8 +367,8 @@ export function LogoStripCard() {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 items-center">
           {logos.map((logo, idx) => (
             <div key={idx} className="p-4 rounded-[12px] border border-[#e5e7eb] bg-[#f9fafb] text-center shadow-spatial-subtle">
-              <p className="font-bold text-xs text-[#030712] font-heading">{logo.name}</p>
-              <p className="text-[11px] text-[#5727e7] font-medium font-body mt-1">{logo.badge}</p>
+              <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="font-bold text-xs text-[#030712] font-heading">{logo.name}</TextEffect>
+              <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-[11px] text-[#5727e7] font-medium font-body mt-1">{logo.badge}</TextEffect>
             </div>
           ))}
         </div>
@@ -385,12 +386,12 @@ export function SpatialFeatureSection() {
           <span className="inline-block px-3.5 py-1 rounded-[8px] bg-[#f2f2ff] text-[#5727e7] border border-[#5727e7]/20 text-xs font-medium tracking-wide uppercase font-body mb-4">
             DISCIPLINED LEARNING
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#030712] tracking-tight leading-[1.3] font-heading mb-4">
+          <TextEffect as="h2" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#030712] tracking-tight leading-[1.3] font-heading mb-4">
             Why Parents Choose Kalaimagal Matriculation School
-          </h2>
-          <p className="text-base sm:text-lg text-[#4b5563] leading-[1.56] font-body">
+          </TextEffect>
+          <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-base sm:text-lg text-[#4b5563] leading-[1.56] font-body">
             Delivering structured, values-based Matriculation education with dedicated teachers, safe campus facilities, and clear academic guidance for every student.
-          </p>
+          </TextEffect>
         </div>
 
         {/* Feature Block 1 (Two-Column Alternating Layout: text-left, screenshot-right, 48px gutter) */}
@@ -400,33 +401,33 @@ export function SpatialFeatureSection() {
             <span className="inline-block px-3.5 py-1 rounded-[8px] border border-[#e5e7eb] bg-white text-[#5727e7] text-sm font-medium font-body shadow-spatial-subtle">
               Core Foundations
             </span>
-            <h3 className="text-2xl lg:text-[32px] font-semibold text-[#030712] leading-[1.3] font-heading">
+            <TextEffect as="h3" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-2xl lg:text-[32px] font-semibold text-[#030712] leading-[1.3] font-heading">
               Structured Routines & Individual Attention
-            </h3>
+            </TextEffect>
             
             {/* Feature List Items with 8px violet disc markers */}
             <div className="space-y-4 font-body pt-2">
               <div className="flex items-start gap-3">
                 <span className="w-2 h-2 rounded-full bg-[#5727e7] shrink-0 mt-2"></span>
                 <div>
-                  <h4 className="text-base font-semibold text-[#030712]">Structured Daily Routines</h4>
-                  <p className="text-sm text-[#4b5563] leading-relaxed">Building clear study habits, focus, and self-discipline for young minds.</p>
+                  <TextEffect as="h4" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-base font-semibold text-[#030712]">Structured Daily Routines</TextEffect>
+                  <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-sm text-[#4b5563] leading-relaxed">Building clear study habits, focus, and self-discipline for young minds.</TextEffect>
                 </div>
               </div>
 
               <div className="flex items-start gap-3">
                 <span className="w-2 h-2 rounded-full bg-[#5727e7] shrink-0 mt-2"></span>
                 <div>
-                  <h4 className="text-base font-semibold text-[#030712]">Matriculation Board Rigor</h4>
-                  <p className="text-sm text-[#4b5563] leading-relaxed">Comprehensive State Board curriculum fostering core subject clarity in Science and Math.</p>
+                  <TextEffect as="h4" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-base font-semibold text-[#030712]">Matriculation Board Rigor</TextEffect>
+                  <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-sm text-[#4b5563] leading-relaxed">Comprehensive State Board curriculum fostering core subject clarity in Science and Math.</TextEffect>
                 </div>
               </div>
 
               <div className="flex items-start gap-3">
                 <span className="w-2 h-2 rounded-full bg-[#5727e7] shrink-0 mt-2"></span>
                 <div>
-                  <h4 className="text-base font-semibold text-[#030712]">Holistic Co-Curricular Wellbeing</h4>
-                  <p className="text-sm text-[#4b5563] leading-relaxed">Nurturing physical health, outdoor games, teamwork, and confidence.</p>
+                  <TextEffect as="h4" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-base font-semibold text-[#030712]">Holistic Co-Curricular Wellbeing</TextEffect>
+                  <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-sm text-[#4b5563] leading-relaxed">Nurturing physical health, outdoor games, teamwork, and confidence.</TextEffect>
                 </div>
               </div>
             </div>
@@ -434,16 +435,16 @@ export function SpatialFeatureSection() {
             {/* 3-Column Stat Block */}
             <div className="grid grid-cols-3 gap-4 pt-4 border-t border-[#e5e7eb]">
               <div>
-                <p className="text-2xl lg:text-[24px] font-bold text-[#030712] font-heading">100%</p>
-                <p className="text-xs lg:text-[14px] text-[#4b5563] font-body">Pass Rate</p>
+                <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-2xl lg:text-[24px] font-bold text-[#030712] font-heading">100%</TextEffect>
+                <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-xs lg:text-[14px] text-[#4b5563] font-body">Pass Rate</TextEffect>
               </div>
               <div>
-                <p className="text-2xl lg:text-[24px] font-bold text-[#030712] font-heading">25+ Yrs</p>
-                <p className="text-xs lg:text-[14px] text-[#4b5563] font-body">Trust History</p>
+                <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-2xl lg:text-[24px] font-bold text-[#030712] font-heading">25+ Yrs</TextEffect>
+                <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-xs lg:text-[14px] text-[#4b5563] font-body">Trust History</TextEffect>
               </div>
               <div>
-                <p className="text-2xl lg:text-[24px] font-bold text-[#030712] font-heading">1:15</p>
-                <p className="text-xs lg:text-[14px] text-[#4b5563] font-body">Teacher Ratio</p>
+                <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-2xl lg:text-[24px] font-bold text-[#030712] font-heading">1:15</TextEffect>
+                <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-xs lg:text-[14px] text-[#4b5563] font-body">Teacher Ratio</TextEffect>
               </div>
             </div>
 

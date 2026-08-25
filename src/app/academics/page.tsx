@@ -1,4 +1,5 @@
 "use client";
+import { TextEffect } from '@/components/core/text-effect';
 
 import { BreadcrumbSchema } from '@/components/ui/breadcrumb-schema';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
@@ -58,12 +59,12 @@ export default function AcademicsPage() {
           <span className="inline-block px-3.5 py-1 rounded-full bg-[#5727e7] text-white text-xs font-semibold uppercase tracking-wider">
             TAMIL NADU STATE BOARD CURRICULUM
           </span>
-          <h1 className="text-3xl md:text-5xl font-bold font-heading text-white">
+          <TextEffect as="h1" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-3xl md:text-5xl font-bold font-heading text-white">
             Academic Excellence from KG to Board Exams
-          </h1>
-          <p className="text-base md:text-lg text-[#94a3b8] max-w-2xl mx-auto leading-relaxed">
+          </TextEffect>
+          <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-base md:text-lg text-[#94a3b8] max-w-2xl mx-auto leading-relaxed">
             Empowering students of Kalaimagal Matriculation School with strong conceptual foundations, Samacheer Kalvi standards, and special exam preparation.
-          </p>
+          </TextEffect>
         </div>
       </section>
 
@@ -80,8 +81,8 @@ export default function AcademicsPage() {
                   : 'bg-white text-[#0f172a] border-[#e2e8f0] hover:bg-[#f8fafc]'
               }`}
             >
-              <p className="font-bold text-sm">{lvl.label}</p>
-              <p className={`text-[11px] ${activeTab === lvl.id ? 'text-white/80' : 'text-[#64748b]'}`}>{lvl.subtitle}</p>
+              <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="font-bold text-sm">{lvl.label}</TextEffect>
+              <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className={`text-[11px] ${activeTab === lvl.id ? 'text-white/80' : 'text-[#64748b]'}`}>{lvl.subtitle}</TextEffect>
             </button>
           ))}
         </div>
@@ -91,20 +92,20 @@ export default function AcademicsPage() {
           {activeTab === 'kindergarten' && (
             <div className="space-y-6">
               <span className="px-3 py-1 bg-[#eeeffc] text-[#5727e7] font-semibold text-xs rounded-full">FOUNDATIONAL EARLY YEARS</span>
-              <h2 className="text-2xl font-bold text-[#0f172a] font-heading">Kindergarten (LKG & UKG) Curriculum</h2>
-              <p className="text-base text-[#475569]">A gentle, play-integrated learning framework focusing on sensory development, mother tongue & English phonics, number recognition, and social confidence.</p>
+              <TextEffect as="h2" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-2xl font-bold text-[#0f172a] font-heading">Kindergarten (LKG & UKG) Curriculum</TextEffect>
+              <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-base text-[#475569]">A gentle, play-integrated learning framework focusing on sensory development, mother tongue & English phonics, number recognition, and social confidence.</TextEffect>
               <div className="grid md:grid-cols-3 gap-6 pt-4">
                 <div className="p-5 rounded-2xl bg-[#f8fafc] border border-[#e2e8f0]">
-                  <h3 className="font-bold text-[#0f172a] mb-2">Phonics & Early Reading</h3>
-                  <p className="text-xs text-[#64748b]">Letter sounds, picture association, Tamil and English rhymes.</p>
+                  <TextEffect as="h3" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="font-bold text-[#0f172a] mb-2">Phonics & Early Reading</TextEffect>
+                  <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-xs text-[#64748b]">Letter sounds, picture association, Tamil and English rhymes.</TextEffect>
                 </div>
                 <div className="p-5 rounded-2xl bg-[#f8fafc] border border-[#e2e8f0]">
-                  <h3 className="font-bold text-[#0f172a] mb-2">Numbers & Shapes</h3>
-                  <p className="text-xs text-[#64748b]">Basic counting, spatial awareness, color matching, and active play.</p>
+                  <TextEffect as="h3" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="font-bold text-[#0f172a] mb-2">Numbers & Shapes</TextEffect>
+                  <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-xs text-[#64748b]">Basic counting, spatial awareness, color matching, and active play.</TextEffect>
                 </div>
                 <div className="p-5 rounded-2xl bg-[#f8fafc] border border-[#e2e8f0]">
-                  <h3 className="font-bold text-[#0f172a] mb-2">Social & Fine Motor Skills</h3>
-                  <p className="text-xs text-[#64748b]">Coloring, clay modeling, group activities, and table etiquette.</p>
+                  <TextEffect as="h3" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="font-bold text-[#0f172a] mb-2">Social & Fine Motor Skills</TextEffect>
+                  <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-xs text-[#64748b]">Coloring, clay modeling, group activities, and table etiquette.</TextEffect>
                 </div>
               </div>
             </div>
@@ -113,20 +114,20 @@ export default function AcademicsPage() {
           {activeTab === 'primary' && (
             <div className="space-y-6">
               <span className="px-3 py-1 bg-[#eeeffc] text-[#5727e7] font-semibold text-xs rounded-full">PRIMARY YEARS (CLASSES 1 TO 5)</span>
-              <h2 className="text-2xl font-bold text-[#0f172a] font-heading">Primary School Curriculum</h2>
-              <p className="text-base text-[#475569]">Building strong arithmetic clarity, reading fluency, environmental awareness, and disciplined study routines across fundamental subjects.</p>
+              <TextEffect as="h2" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-2xl font-bold text-[#0f172a] font-heading">Primary School Curriculum</TextEffect>
+              <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-base text-[#475569]">Building strong arithmetic clarity, reading fluency, environmental awareness, and disciplined study routines across fundamental subjects.</TextEffect>
               <div className="grid md:grid-cols-3 gap-6 pt-4">
                 <div className="p-5 rounded-2xl bg-[#f8fafc] border border-[#e2e8f0]">
-                  <h3 className="font-bold text-[#0f172a] mb-2">Languages & Expression</h3>
-                  <p className="text-xs text-[#64748b]">Reading fluency in Tamil & English, neat handwriting, and basic grammar.</p>
+                  <TextEffect as="h3" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="font-bold text-[#0f172a] mb-2">Languages & Expression</TextEffect>
+                  <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-xs text-[#64748b]">Reading fluency in Tamil & English, neat handwriting, and basic grammar.</TextEffect>
                 </div>
                 <div className="p-5 rounded-2xl bg-[#f8fafc] border border-[#e2e8f0]">
-                  <h3 className="font-bold text-[#0f172a] mb-2">Mathematics & EVS</h3>
-                  <p className="text-xs text-[#64748b]">Addition, subtraction, multiplication tables, environmental science, and nature observation.</p>
+                  <TextEffect as="h3" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="font-bold text-[#0f172a] mb-2">Mathematics & EVS</TextEffect>
+                  <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-xs text-[#64748b]">Addition, subtraction, multiplication tables, environmental science, and nature observation.</TextEffect>
                 </div>
                 <div className="p-5 rounded-2xl bg-[#f8fafc] border border-[#e2e8f0]">
-                  <h3 className="font-bold text-[#0f172a] mb-2">Co-curricular & Wellbeing</h3>
-                  <p className="text-xs text-[#64748b]">Drawing, moral science, physical education games, and storytelling.</p>
+                  <TextEffect as="h3" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="font-bold text-[#0f172a] mb-2">Co-curricular & Wellbeing</TextEffect>
+                  <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-xs text-[#64748b]">Drawing, moral science, physical education games, and storytelling.</TextEffect>
                 </div>
               </div>
             </div>
@@ -135,20 +136,20 @@ export default function AcademicsPage() {
           {activeTab === 'middle' && (
             <div className="space-y-6">
               <span className="px-3 py-1 bg-[#eeeffc] text-[#5727e7] font-semibold text-xs rounded-full">MIDDLE STAGE (CLASSES 6 TO 8)</span>
-              <h2 className="text-2xl font-bold text-[#0f172a] font-heading">Middle School Curriculum</h2>
-              <p className="text-base text-[#475569]">Strengthening analytical thinking, practical science lab experiments, computer literacy, and multi-subject conceptual mastery.</p>
+              <TextEffect as="h2" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-2xl font-bold text-[#0f172a] font-heading">Middle School Curriculum</TextEffect>
+              <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-base text-[#475569]">Strengthening analytical thinking, practical science lab experiments, computer literacy, and multi-subject conceptual mastery.</TextEffect>
               <div className="grid md:grid-cols-3 gap-6 pt-4">
                 <div className="p-5 rounded-2xl bg-[#f8fafc] border border-[#e2e8f0]">
-                  <h3 className="font-bold text-[#0f172a] mb-2">Science & Computer IT</h3>
-                  <p className="text-xs text-[#64748b]">Physics, Chemistry, Biology fundamentals, computer basics, and practical demos.</p>
+                  <TextEffect as="h3" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="font-bold text-[#0f172a] mb-2">Science & Computer IT</TextEffect>
+                  <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-xs text-[#64748b]">Physics, Chemistry, Biology fundamentals, computer basics, and practical demos.</TextEffect>
                 </div>
                 <div className="p-5 rounded-2xl bg-[#f8fafc] border border-[#e2e8f0]">
-                  <h3 className="font-bold text-[#0f172a] mb-2">Mathematics & Social Science</h3>
-                  <p className="text-xs text-[#64748b]">Algebra, geometry, history, geography, civics, and map work.</p>
+                  <TextEffect as="h3" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="font-bold text-[#0f172a] mb-2">Mathematics & Social Science</TextEffect>
+                  <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-xs text-[#64748b]">Algebra, geometry, history, geography, civics, and map work.</TextEffect>
                 </div>
                 <div className="p-5 rounded-2xl bg-[#f8fafc] border border-[#e2e8f0]">
-                  <h3 className="font-bold text-[#0f172a] mb-2">Language Mastery</h3>
-                  <p className="text-xs text-[#64748b]">Advanced Tamil, English comprehension, and optional language exposure.</p>
+                  <TextEffect as="h3" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="font-bold text-[#0f172a] mb-2">Language Mastery</TextEffect>
+                  <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-xs text-[#64748b]">Advanced Tamil, English comprehension, and optional language exposure.</TextEffect>
                 </div>
               </div>
             </div>
@@ -157,20 +158,20 @@ export default function AcademicsPage() {
           {activeTab === 'secondary' && (
             <div className="space-y-6">
               <span className="px-3 py-1 bg-[#eeeffc] text-[#5727e7] font-semibold text-xs rounded-full">BOARD PREPARATION (CLASSES 9 & 10)</span>
-              <h2 className="text-2xl font-bold text-[#0f172a] font-heading">Secondary SSLC Board Curriculum</h2>
-              <p className="text-base text-[#475569]">Comprehensive State Board examination preparation supported by expert faculty, mock test series, and individualized doubt clearing.</p>
+              <TextEffect as="h2" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-2xl font-bold text-[#0f172a] font-heading">Secondary SSLC Board Curriculum</TextEffect>
+              <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-base text-[#475569]">Comprehensive State Board examination preparation supported by expert faculty, mock test series, and individualized doubt clearing.</TextEffect>
               <div className="grid md:grid-cols-3 gap-6 pt-4">
                 <div className="p-5 rounded-2xl bg-[#f8fafc] border border-[#e2e8f0]">
-                  <h3 className="font-bold text-[#0f172a] mb-2">100% Syllabus Coverage</h3>
-                  <p className="text-xs text-[#64748b]">Systematic chapter-by-chapter coverage following Samacheer Kalvi textbooks.</p>
+                  <TextEffect as="h3" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="font-bold text-[#0f172a] mb-2">100% Syllabus Coverage</TextEffect>
+                  <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-xs text-[#64748b]">Systematic chapter-by-chapter coverage following Samacheer Kalvi textbooks.</TextEffect>
                 </div>
                 <div className="p-5 rounded-2xl bg-[#f8fafc] border border-[#e2e8f0]">
-                  <h3 className="font-bold text-[#0f172a] mb-2">Mock Exams & Revision</h3>
-                  <p className="text-xs text-[#64748b]">Weekly tests, monthly mid-terms, and full-length state board model exams.</p>
+                  <TextEffect as="h3" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="font-bold text-[#0f172a] mb-2">Mock Exams & Revision</TextEffect>
+                  <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-xs text-[#64748b]">Weekly tests, monthly mid-terms, and full-length state board model exams.</TextEffect>
                 </div>
                 <div className="p-5 rounded-2xl bg-[#f8fafc] border border-[#e2e8f0]">
-                  <h3 className="font-bold text-[#0f172a] mb-2">Individual Guidance</h3>
-                  <p className="text-xs text-[#64748b]">Personalized attention for rank boosters as well as student improvement programs.</p>
+                  <TextEffect as="h3" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="font-bold text-[#0f172a] mb-2">Individual Guidance</TextEffect>
+                  <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-xs text-[#64748b]">Personalized attention for rank boosters as well as student improvement programs.</TextEffect>
                 </div>
               </div>
             </div>
@@ -179,20 +180,20 @@ export default function AcademicsPage() {
           {activeTab === 'higher' && (
             <div className="space-y-6">
               <span className="px-3 py-1 bg-[#eeeffc] text-[#5727e7] font-semibold text-xs rounded-full">HIGHER SECONDARY (CLASSES 11 & 12)</span>
-              <h2 className="text-2xl font-bold text-[#0f172a] font-heading">Higher Secondary HSC Streams</h2>
-              <p className="text-base text-[#475569]">Specialized Science, Computer Science, and Commerce pathways preparing students for professional college admissions and competitive entrance exams.</p>
+              <TextEffect as="h2" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-2xl font-bold text-[#0f172a] font-heading">Higher Secondary HSC Streams</TextEffect>
+              <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-base text-[#475569]">Specialized Science, Computer Science, and Commerce pathways preparing students for professional college admissions and competitive entrance exams.</TextEffect>
               <div className="grid md:grid-cols-3 gap-6 pt-4">
                 <div className="p-5 rounded-2xl bg-[#f8fafc] border border-[#e2e8f0]">
-                  <h3 className="font-bold text-[#0f172a] mb-2">Math & Bio-Science Stream</h3>
-                  <p className="text-xs text-[#64748b]">Physics, Chemistry, Biology, Mathematics for medical/engineering pathways.</p>
+                  <TextEffect as="h3" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="font-bold text-[#0f172a] mb-2">Math & Bio-Science Stream</TextEffect>
+                  <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-xs text-[#64748b]">Physics, Chemistry, Biology, Mathematics for medical/engineering pathways.</TextEffect>
                 </div>
                 <div className="p-5 rounded-2xl bg-[#f8fafc] border border-[#e2e8f0]">
-                  <h3 className="font-bold text-[#0f172a] mb-2">Computer Science Stream</h3>
-                  <p className="text-xs text-[#64748b]">Physics, Chemistry, Computer Science, Mathematics for IT & engineering.</p>
+                  <TextEffect as="h3" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="font-bold text-[#0f172a] mb-2">Computer Science Stream</TextEffect>
+                  <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-xs text-[#64748b]">Physics, Chemistry, Computer Science, Mathematics for IT & engineering.</TextEffect>
                 </div>
                 <div className="p-5 rounded-2xl bg-[#f8fafc] border border-[#e2e8f0]">
-                  <h3 className="font-bold text-[#0f172a] mb-2">Commerce & Accountancy</h3>
-                  <p className="text-xs text-[#64748b]">Accountancy, Commerce, Economics, Business Math for CA/degree courses.</p>
+                  <TextEffect as="h3" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="font-bold text-[#0f172a] mb-2">Commerce & Accountancy</TextEffect>
+                  <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-xs text-[#64748b]">Accountancy, Commerce, Economics, Business Math for CA/degree courses.</TextEffect>
                 </div>
               </div>
             </div>
@@ -207,20 +208,20 @@ export default function AcademicsPage() {
             <span className="px-3.5 py-1 rounded-full bg-[#5727e7] text-white text-xs font-semibold uppercase">
               ENRICHMENT PROGRAMS
             </span>
-            <h2 className="text-2xl md:text-4xl font-bold font-heading text-white mt-3">
+            <TextEffect as="h2" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-2xl md:text-4xl font-bold font-heading text-white mt-3">
               Special Skill & Value Enhancement
-            </h2>
+            </TextEffect>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
             <div className="p-8 rounded-3xl bg-[#1e293b] border border-[#334155]">
-              <h3 className="text-xl font-bold text-white mb-2">Spoken English & Communication</h3>
-              <p className="text-sm text-[#94a3b8]">Integrated daily spoken English practice from primary levels to build fluent presentation and conversational confidence.</p>
+              <TextEffect as="h3" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-xl font-bold text-white mb-2">Spoken English & Communication</TextEffect>
+              <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-sm text-[#94a3b8]">Integrated daily spoken English practice from primary levels to build fluent presentation and conversational confidence.</TextEffect>
             </div>
 
             <div className="p-8 rounded-3xl bg-[#1e293b] border border-[#334155]">
-              <h3 className="text-xl font-bold text-white mb-2">Mental Arithmetic & Abacus Training</h3>
-              <p className="text-sm text-[#94a3b8]">Structured mental math exercises to dramatically increase calculation speed, focus, and memory agility.</p>
+              <TextEffect as="h3" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-xl font-bold text-white mb-2">Mental Arithmetic & Abacus Training</TextEffect>
+              <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-sm text-[#94a3b8]">Structured mental math exercises to dramatically increase calculation speed, focus, and memory agility.</TextEffect>
             </div>
           </div>
         </div>
@@ -229,8 +230,8 @@ export default function AcademicsPage() {
       {/* CTA */}
       <section className="py-12 px-6 bg-white text-center border-t border-[#e2e8f0]">
         <div className="max-w-xl mx-auto space-y-4">
-          <h2 className="text-2xl font-bold text-[#0f172a] font-heading">Ready to Apply for Admissions?</h2>
-          <p className="text-sm text-[#64748b]">Online application form takes less than 3 minutes.</p>
+          <TextEffect as="h2" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-2xl font-bold text-[#0f172a] font-heading">Ready to Apply for Admissions?</TextEffect>
+          <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-sm text-[#64748b]">Online application form takes less than 3 minutes.</TextEffect>
           <a href="/admissions" className="inline-block px-6 py-3 rounded-xl bg-[#5727e7] text-white font-semibold text-sm shadow-md hover:opacity-90">
             Apply Online Now
           </a>

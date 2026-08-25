@@ -1,4 +1,5 @@
 "use client";
+import { TextEffect } from '@/components/core/text-effect';
 import React from "react";
 
 export default function SchoolMessageSection() {
@@ -53,17 +54,17 @@ export default function SchoolMessageSection() {
           <div className="grid lg:grid-cols-12 gap-10 items-center">
             {/* Left Content Column */}
             <div className="lg:col-span-8 space-y-5">
-              <h2 className={`text-3xl sm:text-4xl font-extrabold ${config.primaryText} font-heading leading-tight`}>
+              <TextEffect as="h2" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className={`text-3xl sm:text-4xl font-extrabold ${config.primaryText} font-heading leading-tight`}>
                 {config.heading}
-              </h2>
+              </TextEffect>
               
-              <p className="text-slate-600 text-base sm:text-lg font-body leading-relaxed">
+              <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-slate-600 text-base sm:text-lg font-body leading-relaxed">
                 "{config.paragraph1}"
-              </p>
+              </TextEffect>
 
-              <p className="text-slate-600 text-sm sm:text-base font-body leading-relaxed">
+              <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-slate-600 text-sm sm:text-base font-body leading-relaxed">
                 "{config.paragraph2}"
-              </p>
+              </TextEffect>
 
               {/* Leadership Signature Badge */}
               <div className="pt-4 flex items-center gap-4">
@@ -71,12 +72,12 @@ export default function SchoolMessageSection() {
                   ✦
                 </div>
                 <div>
-                  <h4 className={`text-base font-bold ${config.primaryText} font-heading`}>
+                  <TextEffect as="h4" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className={`text-base font-bold ${config.primaryText} font-heading`}>
                     Principal & Management Desk
-                  </h4>
-                  <p className="text-xs text-slate-500 font-body">
+                  </TextEffect>
+                  <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-xs text-slate-500 font-body">
                     {config.leaderRole}
-                  </p>
+                  </TextEffect>
                 </div>
               </div>
             </div>

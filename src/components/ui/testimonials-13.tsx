@@ -1,4 +1,5 @@
 ﻿"use client";
+import { TextEffect } from '@/components/core/text-effect';
 
 import Link from "next/link";
 import type { ComponentProps } from "react";
@@ -94,12 +95,12 @@ export default function Testimonials13({
 }: Testimonials13Props) {
   return (
     <div className="px-6 py-20 max-w-7xl mx-auto overflow-hidden">
-      <h2 className="text-center font-bold text-3xl tracking-tight md:text-4xl font-heading">
+      <TextEffect as="h2" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-center font-bold text-3xl tracking-tight md:text-4xl font-heading">
         {title}
-      </h2>
-      <p className="mt-3 text-center text-muted-foreground text-base md:text-lg font-body max-w-2xl mx-auto">
+      </TextEffect>
+      <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="mt-3 text-center text-muted-foreground text-base md:text-lg font-body max-w-2xl mx-auto">
         {subtitle}
-      </p>
+      </TextEffect>
       <div className="mt-12 space-y-px border rounded-2xl bg-muted/40 overflow-hidden shadow-sm">
         <Marquee className="py-2 [--duration:50s] [--gap:16px]" pauseOnHover>
           <TestimonialList items={testimonialsList} />
@@ -128,19 +129,19 @@ const TestimonialList = ({ items }: { items: TestimonialItem[] }) =>
                   </AvatarFallback>
                 </Avatar>
                 <div>
-                  <p className="font-bold text-sm font-heading">{testimonial.name}</p>
-                  <p className="text-muted-foreground text-xs font-body">
+                  <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="font-bold text-sm font-heading">{testimonial.name}</TextEffect>
+                  <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-muted-foreground text-xs font-body">
                     {testimonial.designation}
-                  </p>
+                  </TextEffect>
                 </div>
               </div>
               <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-amber-400/20 text-amber-600 font-body">
                 Verified
               </span>
             </div>
-            <p className="mt-4 text-sm leading-relaxed text-slate-700 dark:text-slate-300 font-body">
+            <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="mt-4 text-sm leading-relaxed text-slate-700 dark:text-slate-300 font-body">
               "{testimonial.testimonial}"
-            </p>
+            </TextEffect>
           </div>
 
           <div className="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">

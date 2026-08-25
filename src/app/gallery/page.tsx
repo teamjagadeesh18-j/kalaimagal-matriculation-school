@@ -1,4 +1,5 @@
 "use client";
+import { TextEffect } from '@/components/core/text-effect';
 
 import { BreadcrumbSchema } from '@/components/ui/breadcrumb-schema';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
@@ -48,12 +49,12 @@ export default function GalleryPage() {
           <span className="inline-block px-3.5 py-1 rounded-full bg-[#5727e7] text-white text-xs font-semibold uppercase tracking-wider">
             PHOTO GALLERY
           </span>
-          <h1 className="text-3xl md:text-5xl font-bold font-heading text-white">
+          <TextEffect as="h1" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-3xl md:text-5xl font-bold font-heading text-white">
             Campus Life & Event Moments
-          </h1>
-          <p className="text-base md:text-lg text-[#94a3b8] max-w-2xl mx-auto leading-relaxed">
+          </TextEffect>
+          <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-base md:text-lg text-[#94a3b8] max-w-2xl mx-auto leading-relaxed">
             Explore photos of our academic spaces, sports meets, annual celebrations, and student activities at Kalaimagal Matriculation School.
-          </p>
+          </TextEffect>
         </div>
       </section>
 
@@ -90,7 +91,7 @@ export default function GalleryPage() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
                 <span className="text-[10px] font-bold uppercase tracking-wider bg-[#5727e7] px-2 py-0.5 rounded w-max mb-1">{photo.category}</span>
-                <p className="font-bold text-xs">{photo.title}</p>
+                <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="font-bold text-xs">{photo.title}</TextEffect>
               </div>
             </div>
           ))}

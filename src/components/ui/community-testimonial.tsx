@@ -1,4 +1,5 @@
 "use client";
+import { TextEffect } from '@/components/core/text-effect';
 
 import React from "react";
 
@@ -17,20 +18,20 @@ export const TestimonialCard: React.FC<TestimonialCardProps> = ({
 
   return (
     <div className="testimonial-card flex flex-col justify-between p-6 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-all w-80 sm:w-96 flex-shrink-0">
-      <p className="text-slate-700 dark:text-slate-300 text-sm md:text-base italic leading-relaxed font-body">
+      <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-slate-700 dark:text-slate-300 text-sm md:text-base italic leading-relaxed font-body">
         "{quote}"
-      </p>
+      </TextEffect>
       <div className="flex items-center gap-3.5 mt-6 pt-4 border-t border-slate-100 dark:border-slate-800">
         <div className="w-11 h-11 rounded-full bg-[#172554] text-[#F4B400] font-bold text-lg flex items-center justify-center shadow-inner font-heading flex-shrink-0">
           {initial}
         </div>
         <div>
-          <h4 className="text-sm font-bold text-slate-900 dark:text-white font-heading">
+          <TextEffect as="h4" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-sm font-bold text-slate-900 dark:text-white font-heading">
             {authorName}
-          </h4>
-          <p className="text-xs text-slate-500 dark:text-slate-400 font-body">
+          </TextEffect>
+          <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-xs text-slate-500 dark:text-slate-400 font-body">
             {authorTitle}
-          </p>
+          </TextEffect>
         </div>
       </div>
     </div>
@@ -92,12 +93,12 @@ export default function TestimonialsSection({ data }: TestimonialsSectionProps) 
         <span className="px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-400/20 text-amber-600 dark:text-amber-400 border border-amber-400/30 font-body">
           PARENT & COMMUNITY REVIEWS
         </span>
-        <h2 className="text-3xl md:text-5xl font-extrabold text-slate-900 dark:text-white leading-tight font-heading">
+        <TextEffect as="h2" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-3xl md:text-5xl font-extrabold text-slate-900 dark:text-white leading-tight font-heading">
           {data.title}
-        </h2>
-        <p className="text-base md:text-lg text-slate-600 dark:text-slate-300 font-body">
+        </TextEffect>
+        <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-base md:text-lg text-slate-600 dark:text-slate-300 font-body">
           {data.subtitle}
-        </p>
+        </TextEffect>
       </div>
 
       <div className="flex flex-col gap-6 z-10 w-full">

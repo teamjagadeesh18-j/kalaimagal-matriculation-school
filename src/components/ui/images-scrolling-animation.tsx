@@ -1,4 +1,5 @@
 "use client";
+import { TextEffect } from '@/components/core/text-effect';
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import ReactLenis from "lenis/react";
@@ -70,7 +71,7 @@ const StickyCard_001 = ({
       >
         <img src={src || "/placeholder.svg"} alt={title} className="h-full w-full object-cover" />
         <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-4 text-white">
-          <p className="text-sm md:text-base font-semibold font-body">{title}</p>
+          <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-sm md:text-base font-semibold font-body">{title}</TextEffect>
         </div>
       </motion.div>
     </div>

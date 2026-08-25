@@ -1,4 +1,5 @@
 "use client";
+import { TextEffect } from '@/components/core/text-effect';
 
 import { BreadcrumbSchema } from '@/components/ui/breadcrumb-schema';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
@@ -67,12 +68,12 @@ export default function FacilitiesPage() {
           <span className="inline-block px-3.5 py-1 rounded-full bg-[#5727e7] text-white text-xs font-semibold uppercase tracking-wider">
             CAMPUS INFRASTRUCTURE
           </span>
-          <h1 className="text-3xl md:text-5xl font-bold font-heading text-white">
+          <TextEffect as="h1" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-3xl md:text-5xl font-bold font-heading text-white">
             World-Class School Facilities
-          </h1>
-          <p className="text-base md:text-lg text-[#94a3b8] max-w-2xl mx-auto leading-relaxed">
+          </TextEffect>
+          <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-base md:text-lg text-[#94a3b8] max-w-2xl mx-auto leading-relaxed">
             Designed to foster academic excellence, physical fitness, creative exploration, and student safety at Kalaimagal Matriculation School.
-          </p>
+          </TextEffect>
         </div>
       </section>
 
@@ -86,8 +87,8 @@ export default function FacilitiesPage() {
                 <div className="w-10 h-10 rounded-xl bg-[#eeeffc] text-[#5727e7] flex items-center justify-center">
                   <f.icon className="w-5 h-5" />
                 </div>
-                <h3 className="text-lg font-bold text-[#0f172a] font-heading">{f.title}</h3>
-                <p className="text-xs text-[#64748b] leading-relaxed">{f.desc}</p>
+                <TextEffect as="h3" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-lg font-bold text-[#0f172a] font-heading">{f.title}</TextEffect>
+                <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-xs text-[#64748b] leading-relaxed">{f.desc}</TextEffect>
               </div>
             </div>
           ))}
@@ -99,12 +100,12 @@ export default function FacilitiesPage() {
         <div className="max-w-[1200px] mx-auto bg-[#1e293b] p-8 md:p-12 rounded-3xl border border-[#334155] grid lg:grid-cols-2 gap-8 items-center">
           <div className="space-y-4">
             <span className="text-xs font-bold uppercase tracking-wider text-[#5727e7]">SAFETY & CONVENIENCE</span>
-            <h2 className="text-2xl md:text-3xl font-bold text-white font-heading">
+            <TextEffect as="h2" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-2xl md:text-3xl font-bold text-white font-heading">
               CCTV Surveillance & Transport Services
-            </h2>
-            <p className="text-sm text-[#94a3b8] leading-relaxed">
+            </TextEffect>
+            <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-sm text-[#94a3b8] leading-relaxed">
               We prioritize student safety with 24/7 CCTV monitoring across corridors and gates. Our dedicated transport fleet covers major local routes with trained drivers and attendants.
-            </p>
+            </TextEffect>
           </div>
 
           <div className="space-y-3">
@@ -127,8 +128,8 @@ export default function FacilitiesPage() {
       {/* CTA */}
       <section className="py-12 px-6 bg-white text-center border-t border-[#e2e8f0]">
         <div className="max-w-xl mx-auto space-y-4">
-          <h2 className="text-2xl font-bold text-[#0f172a] font-heading">Schedule a Campus Visit</h2>
-          <p className="text-sm text-[#64748b]">Walk through our campus facilities and talk to our admissions staff.</p>
+          <TextEffect as="h2" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-2xl font-bold text-[#0f172a] font-heading">Schedule a Campus Visit</TextEffect>
+          <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-sm text-[#64748b]">Walk through our campus facilities and talk to our admissions staff.</TextEffect>
           <a href="/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#5727e7] text-white font-semibold text-sm shadow-md hover:opacity-90">
             Book Campus Tour <ArrowRight className="w-4 h-4" />
           </a>

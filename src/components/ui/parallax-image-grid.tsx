@@ -1,4 +1,5 @@
 'use client';
+import { TextEffect } from '@/components/core/text-effect';
 
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
@@ -62,34 +63,34 @@ export function ParallaxImageGrid({
       {/* Header */}
       <div className="max-w-4xl mx-auto text-center space-y-4 mb-16 relative z-20">
         <motion.span
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-60px" }}
-          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          
+          
+          
+          
           className={`inline-block px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider border ${badgeBg} ${badgeTextStyle}`}
         >
           {badgeText}
         </motion.span>
         
-        <motion.h2
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-60px" }}
-          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
+        <TextEffect as="h2" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3}
+          
+          
+          
+          
           className={`text-3xl sm:text-5xl font-extrabold font-serif ${primaryText} tracking-tight`}
         >
           {title}
-        </motion.h2>
+        </TextEffect>
 
-        <motion.p
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-60px" }}
-          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
+        <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3}
+          
+          
+          
+          
           className="text-slate-400 text-sm sm:text-base max-w-2xl mx-auto font-medium"
         >
           {subtitle}
-        </motion.p>
+        </TextEffect>
       </div>
 
       {/* 3D Perspective Container */}
@@ -127,7 +128,7 @@ export function ParallaxImageGrid({
   );
 }
 
-function ParallaxCard({ item }: { item: ParallaxImageItem }) {
+function ParallaxCard({ item }: { item: ParallaxImageItem; key?: any }) {
   return (
     <div className="group relative rounded-2xl overflow-hidden shadow-xl border border-white/10 bg-slate-800/60 backdrop-blur-sm cursor-pointer">
       <div className="aspect-[4/3] overflow-hidden relative">
@@ -140,12 +141,12 @@ function ParallaxCard({ item }: { item: ParallaxImageItem }) {
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent opacity-80 group-hover:opacity-95 transition-opacity" />
         
         <div className="absolute bottom-4 left-4 right-4 text-white space-y-1">
-          <h4 className="font-bold text-sm sm:text-base font-serif group-hover:text-amber-400 transition-colors">
+          <TextEffect as="h4" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="font-bold text-sm sm:text-base font-serif group-hover:text-amber-400 transition-colors">
             {item.title}
-          </h4>
-          <p className="text-xs text-slate-300 line-clamp-1 font-medium">
+          </TextEffect>
+          <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-xs text-slate-300 line-clamp-1 font-medium">
             {item.subtitle}
-          </p>
+          </TextEffect>
         </div>
       </div>
     </div>

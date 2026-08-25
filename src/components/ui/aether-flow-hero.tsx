@@ -1,4 +1,5 @@
 "use client";
+import { TextEffect } from '@/components/core/text-effect';
 
 import React from 'react';
 import { motion } from 'framer-motion';
@@ -131,14 +132,14 @@ const AetherFlowHero = ({
                     <GraduationCap className="h-4 w-4 text-amber-400" />
                     <span className="text-sm font-medium text-gray-200">{badge}</span>
                 </motion.div>
-                <motion.h1 custom={1} variants={fadeUpVariants as any} initial="hidden" animate="visible"
+                <TextEffect as="h1" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} custom={1} variants={fadeUpVariants as any} initial="hidden" animate="visible"
                     className="text-4xl sm:text-6xl md:text-8xl font-bold tracking-tighter mb-6 bg-clip-text text-transparent bg-gradient-to-b from-white to-gray-400">
                     {title}
-                </motion.h1>
-                <motion.p custom={2} variants={fadeUpVariants as any} initial="hidden" animate="visible"
+                </TextEffect>
+                <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} custom={2} variants={fadeUpVariants as any} initial="hidden" animate="visible"
                     className="max-w-2xl mx-auto text-lg text-gray-400 mb-10">
                     {description}
-                </motion.p>
+                </TextEffect>
                 <motion.div custom={3} variants={fadeUpVariants as any} initial="hidden" animate="visible">
                     <a href="#contact" className="px-8 py-4 bg-amber-500 text-black font-semibold rounded-lg shadow-lg hover:bg-amber-400 transition-colors duration-300 inline-flex items-center gap-2 mx-auto">
                         {ctaText}

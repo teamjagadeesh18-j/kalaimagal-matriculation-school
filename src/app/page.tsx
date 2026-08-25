@@ -1,4 +1,5 @@
 "use client";
+import { TextEffect } from '@/components/core/text-effect';
 
 import SchoolMessageSection from "@/components/ui/school-message-section";
 
@@ -195,12 +196,12 @@ export default function Home() {
             <span className="inline-block px-3.5 py-1 rounded-[8px] bg-[#f2f2ff] text-[#5727e7] border border-[#5727e7]/20 text-xs font-medium tracking-wide uppercase font-body mb-3">
               CAMPUS GALLERY
             </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#030712] leading-[1.3] font-heading mb-4">
+            <TextEffect as="h2" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#030712] leading-[1.3] font-heading mb-4">
               Explore Life at Kalaimagal
-            </h2>
-            <p className="text-[#4b5563] text-base sm:text-lg leading-[1.56] font-body">
+            </TextEffect>
+            <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-[#4b5563] text-base sm:text-lg leading-[1.56] font-body">
               A glance at campus life, activities, and sports events at Kalaimagal Matriculation School.
-            </p>
+            </TextEffect>
           </div>
 
           <ImagesScrollingAnimation projects={galleryItems} />

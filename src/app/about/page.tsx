@@ -1,4 +1,5 @@
 "use client";
+import { TextEffect } from '@/components/core/text-effect';
 
 import { BreadcrumbSchema } from '@/components/ui/breadcrumb-schema';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
@@ -28,12 +29,12 @@ export default function AboutPage() {
           <span className="inline-block px-3.5 py-1 rounded-full bg-[#5727e7] text-white text-xs font-semibold uppercase tracking-wider mb-4">
             ABOUT KALAIMAGAL MATRICULATION SCHOOL
           </span>
-          <h1 className="text-3xl md:text-5xl font-bold font-heading mb-4 text-white">
+          <TextEffect as="h1" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-3xl md:text-5xl font-bold font-heading mb-4 text-white">
             Educational Excellence Since 1995
-          </h1>
-          <p className="text-base md:text-lg text-[#94a3b8] max-w-2xl mx-auto leading-relaxed">
+          </TextEffect>
+          <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-base md:text-lg text-[#94a3b8] max-w-2xl mx-auto leading-relaxed">
             Established with the mission of providing holistic, values-driven education to empower every student to achieve their fullest potential.
-          </p>
+          </TextEffect>
         </div>
       </section>
 
@@ -44,32 +45,32 @@ export default function AboutPage() {
             <span className="inline-block px-3.5 py-1 rounded-full bg-[#f1f5f9] text-[#5727e7] text-xs font-bold uppercase tracking-wide">
               OUR FOUNDATIONAL JOURNEY
             </span>
-            <h2 className="text-2xl md:text-4xl font-bold text-[#0f172a] font-heading leading-tight">
+            <TextEffect as="h2" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-2xl md:text-4xl font-bold text-[#0f172a] font-heading leading-tight">
               A Beacon of Quality Education in Balammal St
-            </h2>
-            <p className="text-base text-[#475569] leading-relaxed">
+            </TextEffect>
+            <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-base text-[#475569] leading-relaxed">
               Kalaimagal Matriculation School was established to deliver comprehensive Tamil Nadu State Board education combined with disciplined character building, modern teaching methodologies, and individual care.
-            </p>
-            <p className="text-base text-[#475569] leading-relaxed">
+            </TextEffect>
+            <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-base text-[#475569] leading-relaxed">
               Managed by an experienced team of educators, our institution nurtures curiosity, critical thinking, and social responsibility in a safe, supportive campus environment.
-            </p>
+            </TextEffect>
 
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4 border-t border-[#e2e8f0]">
               <div className="p-3 bg-[#f8fafc] rounded-xl border border-[#e2e8f0]">
-                <p className="text-2xl font-bold text-[#0f172a] font-heading">1995</p>
-                <p className="text-xs text-[#64748b]">Established</p>
+                <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-2xl font-bold text-[#0f172a] font-heading">1995</TextEffect>
+                <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-xs text-[#64748b]">Established</TextEffect>
               </div>
               <div className="p-3 bg-[#f8fafc] rounded-xl border border-[#e2e8f0]">
-                <p className="text-2xl font-bold text-[#0f172a] font-heading">100%</p>
-                <p className="text-xs text-[#64748b]">Pass Record</p>
+                <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-2xl font-bold text-[#0f172a] font-heading">100%</TextEffect>
+                <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-xs text-[#64748b]">Pass Record</TextEffect>
               </div>
               <div className="p-3 bg-[#f8fafc] rounded-xl border border-[#e2e8f0]">
-                <p className="text-2xl font-bold text-[#0f172a] font-heading">1:15</p>
-                <p className="text-xs text-[#64748b]">Teacher Ratio</p>
+                <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-2xl font-bold text-[#0f172a] font-heading">1:15</TextEffect>
+                <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-xs text-[#64748b]">Teacher Ratio</TextEffect>
               </div>
               <div className="p-3 bg-[#f8fafc] rounded-xl border border-[#e2e8f0]">
-                <p className="text-2xl font-bold text-[#0f172a] font-heading">4.8★</p>
-                <p className="text-xs text-[#64748b]">Parent Rating</p>
+                <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-2xl font-bold text-[#0f172a] font-heading">4.8★</TextEffect>
+                <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-xs text-[#64748b]">Parent Rating</TextEffect>
               </div>
             </div>
           </div>
@@ -88,12 +89,12 @@ export default function AboutPage() {
       <section className="py-16 px-6 bg-[#f7f8f9] border-t border-[#e2e8f0]">
         <div className="max-w-[1200px] mx-auto space-y-12">
           <div className="text-center max-w-2xl mx-auto">
-            <h2 className="text-2xl md:text-3xl font-bold text-[#0f172a] font-heading mb-3">
+            <TextEffect as="h2" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-2xl md:text-3xl font-bold text-[#0f172a] font-heading mb-3">
               Our Core Educational Pillars
-            </h2>
-            <p className="text-sm md:text-base text-[#64748b]">
+            </TextEffect>
+            <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-sm md:text-base text-[#64748b]">
               Grounding academic success in deep moral values, physical wellbeing, and life confidence.
-            </p>
+            </TextEffect>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -101,30 +102,30 @@ export default function AboutPage() {
               <div className="w-12 h-12 rounded-xl bg-[#eeeffc] text-[#5727e7] flex items-center justify-center mb-6">
                 <GraduationCap className="w-6 h-6" />
               </div>
-              <h3 className="text-xl font-bold text-[#0f172a] font-heading mb-3">Academic Mastery</h3>
-              <p className="text-sm text-[#475569] leading-relaxed">
+              <TextEffect as="h3" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-xl font-bold text-[#0f172a] font-heading mb-3">Academic Mastery</TextEffect>
+              <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-sm text-[#475569] leading-relaxed">
                 Structured Samacheer Kalvi syllabus, regular revision tests, concept clarity in Math and Science, and board exam coaching.
-              </p>
+              </TextEffect>
             </div>
 
             <div className="bg-white p-8 rounded-2xl border border-[#e2e8f0] shadow-sm hover:shadow-md transition-shadow">
               <div className="w-12 h-12 rounded-xl bg-[#eeeffc] text-[#5727e7] flex items-center justify-center mb-6">
                 <Heart className="w-6 h-6" />
               </div>
-              <h3 className="text-xl font-bold text-[#0f172a] font-heading mb-3">Values & Character Care</h3>
-              <p className="text-sm text-[#475569] leading-relaxed">
+              <TextEffect as="h3" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-xl font-bold text-[#0f172a] font-heading mb-3">Values & Character Care</TextEffect>
+              <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-sm text-[#475569] leading-relaxed">
                 Instilling discipline, respect for elders, honesty, and empathy to shape responsible citizens.
-              </p>
+              </TextEffect>
             </div>
 
             <div className="bg-white p-8 rounded-2xl border border-[#e2e8f0] shadow-sm hover:shadow-md transition-shadow">
               <div className="w-12 h-12 rounded-xl bg-[#eeeffc] text-[#5727e7] flex items-center justify-center mb-6">
                 <Award className="w-6 h-6" />
               </div>
-              <h3 className="text-xl font-bold text-[#0f172a] font-heading mb-3">Holistic Development</h3>
-              <p className="text-sm text-[#475569] leading-relaxed">
+              <TextEffect as="h3" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-xl font-bold text-[#0f172a] font-heading mb-3">Holistic Development</TextEffect>
+              <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-sm text-[#475569] leading-relaxed">
                 Balanced focus on outdoor sports, yoga, cultural celebrations, science exhibitions, and speech competitions.
-              </p>
+              </TextEffect>
             </div>
           </div>
         </div>
@@ -140,8 +141,8 @@ export default function AboutPage() {
             "Education is the most powerful tool to transform character and society. At Kalaimagal Matriculation School, we nurture every child with individual care, moral values, and academic strength."
           </blockquote>
           <div>
-            <p className="font-bold text-base text-white font-heading">Management & Principal Team</p>
-            <p className="text-xs text-[#94a3b8]">Kalaimagal Matriculation School, Balammal St</p>
+            <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="font-bold text-base text-white font-heading">Management & Principal Team</TextEffect>
+            <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-xs text-[#94a3b8]">Kalaimagal Matriculation School, Balammal St</TextEffect>
           </div>
         </div>
       </section>
@@ -149,8 +150,8 @@ export default function AboutPage() {
       {/* CTA */}
       <section className="py-12 px-6 bg-[#ffffff] border-t border-[#e2e8f0] text-center">
         <div className="max-w-2xl mx-auto space-y-4">
-          <h2 className="text-2xl font-bold text-[#0f172a] font-heading">Ready to Experience Our Campus?</h2>
-          <p className="text-sm text-[#64748b]">Connect with our admissions team or schedule a personalized walk-through tour.</p>
+          <TextEffect as="h2" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-2xl font-bold text-[#0f172a] font-heading">Ready to Experience Our Campus?</TextEffect>
+          <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-sm text-[#64748b]">Connect with our admissions team or schedule a personalized walk-through tour.</TextEffect>
           <div className="pt-2">
             <a 
               href="/admissions" 

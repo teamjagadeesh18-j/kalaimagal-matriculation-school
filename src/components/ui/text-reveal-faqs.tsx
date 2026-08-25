@@ -1,4 +1,6 @@
-'use client'
+"use client";
+
+import { TextEffect } from '@/components/core/text-effect';
 
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
 import Link from 'next/link'
@@ -41,11 +43,11 @@ export default function FAQs() {
             <span className="inline-block px-3.5 py-1 rounded-[8px] bg-[#f2f2ff] text-[#5727e7] border border-[#5727e7]/20 text-xs font-semibold tracking-wide uppercase font-body mb-3">
               HELP & ADMISSIONS
             </span>
-            <h2 className="text-[#030712] text-3xl md:text-4xl font-bold font-heading">Frequently Asked Questions</h2>
-            <p className="text-[#4b5563] mt-4 text-balance text-base md:text-lg">
+            <TextEffect as="h2" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-[#030712] text-3xl md:text-4xl font-bold font-heading">Frequently Asked Questions</TextEffect>
+            <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-[#4b5563] mt-4 text-balance text-base md:text-lg">
               Everything you need to know about admissions, academics, and life at Kalaimagal Matriculation School.
-            </p>
-            <p className="text-[#4b5563] mt-6 hidden md:block text-sm">
+            </TextEffect>
+            <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-[#4b5563] mt-6 hidden md:block text-sm">
               Can’t find what you’re looking for? Reach out to our{' '}
               <Link
                 href="#connect"
@@ -54,7 +56,7 @@ export default function FAQs() {
                 admissions support team
               </Link>{' '}
               for guidance.
-            </p>
+            </TextEffect>
           </div>
 
           <div className="lg:col-span-7">
@@ -77,14 +79,14 @@ export default function FAQs() {
             </Accordion>
           </div>
 
-          <p className="text-[#4b5563] mt-6 md:hidden text-sm">
+          <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-[#4b5563] mt-6 md:hidden text-sm">
             Can't find what you're looking for? Contact our{' '}
             <Link
               href="#connect"
               className="text-[#5727e7] font-semibold hover:underline">
               admissions team
             </Link>
-          </p>
+          </TextEffect>
         </div>
       </div>
     </section>
@@ -121,7 +123,7 @@ export const BlurredStagger = ({
  
   return (
     <div className="w-full pt-1">
-      <motion.p
+      <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3}
         variants={container}
         initial="hidden"
         whileInView="show"
@@ -138,7 +140,7 @@ export const BlurredStagger = ({
             {char === " " ? "\u00A0" : char}
           </motion.span>
         ))}
-      </motion.p>
+      </TextEffect>
     </div>
   );
 };

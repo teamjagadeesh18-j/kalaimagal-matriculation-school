@@ -1,4 +1,5 @@
 "use client";
+import { TextEffect } from '@/components/core/text-effect';
 
 import React from "react";
 
@@ -34,17 +35,17 @@ export default function AcademicStructure({
         </div>
 
         <div className="text-center max-w-4xl mx-auto mb-14">
-          <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#030712] tracking-tight leading-[1.3] font-heading mb-3">
+          <TextEffect as="h2" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#030712] tracking-tight leading-[1.3] font-heading mb-3">
             {title}
-          </h2>
+          </TextEffect>
           {subtitle && (
-            <h3 className="text-lg md:text-xl font-semibold text-[#030712] font-body mb-3">
+            <TextEffect as="h3" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-lg md:text-xl font-semibold text-[#030712] font-body mb-3">
               {subtitle}
-            </h3>
+            </TextEffect>
           )}
-          <p className="text-[#4b5563] text-base md:text-lg leading-[1.56] font-body max-w-3xl mx-auto">
+          <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-[#4b5563] text-base md:text-lg leading-[1.56] font-body max-w-3xl mx-auto">
             {description}
-          </p>
+          </TextEffect>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5 items-stretch">
@@ -61,12 +62,12 @@ export default function AcademicStructure({
                     <span className="text-xs font-semibold tracking-wider uppercase mb-3 block text-white/90">
                       {card.tag}
                     </span>
-                    <h4 className="text-xl font-bold text-white font-heading mb-3 leading-snug">
+                    <TextEffect as="h4" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-xl font-bold text-white font-heading mb-3 leading-snug">
                       {card.title}
-                    </h4>
-                    <p className="text-white/90 text-xs md:text-sm leading-relaxed mb-6 font-body">
+                    </TextEffect>
+                    <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-white/90 text-xs md:text-sm leading-relaxed mb-6 font-body">
                       {card.description}
-                    </p>
+                    </TextEffect>
                   </div>
                   <a
                     href="#connect"
@@ -90,12 +91,12 @@ export default function AcademicStructure({
                   <span className="inline-block text-[11px] md:text-xs font-semibold tracking-wider uppercase mb-3 px-2.5 py-0.5 rounded-[16px] bg-[#f2f2ff] text-[#5727e7]">
                     {card.tag}
                   </span>
-                  <h4 className="text-xl font-bold text-[#030712] font-heading mb-3 leading-snug">
+                  <TextEffect as="h4" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-xl font-bold text-[#030712] font-heading mb-3 leading-snug">
                     {card.title}
-                  </h4>
-                  <p className="text-[#4b5563] text-xs md:text-sm leading-relaxed mb-6 font-body">
+                  </TextEffect>
+                  <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-[#4b5563] text-xs md:text-sm leading-relaxed mb-6 font-body">
                     {card.description}
-                  </p>
+                  </TextEffect>
                 </div>
                 <a
                   href="#connect"

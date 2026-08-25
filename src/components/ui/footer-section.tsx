@@ -1,4 +1,5 @@
 'use client';
+import { TextEffect } from '@/components/core/text-effect';
 
 import React from 'react';
 import type { ComponentProps, ReactNode } from 'react';
@@ -73,21 +74,21 @@ export function Footer() {
               <span className="text-xs text-[#4b5563] font-medium">Matriculation Campus</span>
             </div>
           </div>
-          <p className="text-xs md:text-sm text-[#4b5563] leading-relaxed max-w-sm">
+          <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-xs md:text-sm text-[#4b5563] leading-relaxed max-w-sm">
             Building Character. Shaping Futures. Delivering structured, values-based Matriculation education with dedicated teachers and safe campus facilities.
-          </p>
-          <p className="text-xs text-[#4b5563] mt-4">
+          </TextEffect>
+          <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-xs text-[#4b5563] mt-4">
             © {new Date().getFullYear()} Kalaimagal Matriculation School. All rights reserved.
-          </p>
+          </TextEffect>
         </AnimatedContainer>
 
         <div className="mt-10 grid grid-cols-2 gap-8 md:grid-cols-4 xl:col-span-2 xl:mt-0">
           {footerLinks.map((section, index) => (
             <AnimatedContainer key={section.label} delay={0.1 + index * 0.1}>
               <div className="mb-8 md:mb-0">
-                <h3 className="text-xs font-bold uppercase tracking-wider text-[#030712] font-heading">
+                <TextEffect as="h3" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-xs font-bold uppercase tracking-wider text-[#030712] font-heading">
                   {section.label}
-                </h3>
+                </TextEffect>
                 <ul className="mt-4 space-y-2.5 text-xs md:text-sm text-[#4b5563]">
                   {section.links.map((link) => (
                     <li key={link.title}>

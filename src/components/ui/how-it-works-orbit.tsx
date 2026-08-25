@@ -1,4 +1,5 @@
 "use client";
+import { TextEffect } from '@/components/core/text-effect';
 
 import React, { useRef } from "react";
 import { LazyMotion, domAnimation, m, useInView } from "framer-motion";
@@ -59,12 +60,12 @@ export default function HowItWorksOrbit({ steps, title, subtitle, className }: H
           <span className="inline-block px-3 py-1 rounded-[8px] bg-[#f2f2ff] text-[#5727e7] border border-[#5727e7]/20 text-xs font-semibold uppercase tracking-wider mb-2 font-body">
             ADMISSION PROCESS
           </span>
-          <h2 className="text-2xl md:text-3xl font-bold text-neutral-900 dark:text-white font-heading">
+          <TextEffect as="h2" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-2xl md:text-3xl font-bold text-neutral-900 dark:text-white font-heading">
             {title || "How Admission Works"}
-          </h2>
-          <p className="text-neutral-500 dark:text-neutral-400 mt-1.5 text-sm font-body">
+          </TextEffect>
+          <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-neutral-500 dark:text-neutral-400 mt-1.5 text-sm font-body">
             {subtitle || "Every step connects back to our core educational values."}
-          </p>
+          </TextEffect>
         </div>
 
         <div ref={ref} className="relative mx-auto hidden md:block z-10" style={{ width: size, height: size }}>
@@ -124,8 +125,8 @@ export default function HowItWorksOrbit({ steps, title, subtitle, className }: H
                   <div className="rounded-lg p-2.5 text-center" style={{ backgroundColor: `${step.color || "#5727e7"}12` }}>
                     <Pin className="w-3 h-3 mx-auto mb-1" style={{ color: step.color || "#5727e7" }} />
                     <span className="text-[10px] font-bold tracking-wide" style={{ color: step.color || "#5727e7" }}>STEP {index + 1}</span>
-                    <h3 className="text-xs font-semibold text-neutral-800 dark:text-neutral-100 mt-0.5">{step.title}</h3>
-                    <p className="text-neutral-500 dark:text-neutral-400 text-[10px] mt-0.5 leading-snug">{step.description}</p>
+                    <TextEffect as="h3" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-xs font-semibold text-neutral-800 dark:text-neutral-100 mt-0.5">{step.title}</TextEffect>
+                    <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-neutral-500 dark:text-neutral-400 text-[10px] mt-0.5 leading-snug">{step.description}</TextEffect>
                   </div>
                 </div>
               </m.div>
@@ -139,8 +140,8 @@ export default function HowItWorksOrbit({ steps, title, subtitle, className }: H
               <div className="w-3 h-3 rounded-full mt-1 shrink-0" style={{ backgroundColor: step.color || "#5727e7" }} />
               <div>
                 <span className="text-[10px] font-bold tracking-wide" style={{ color: step.color || "#5727e7" }}>STEP {index + 1}</span>
-                <h3 className="font-semibold text-sm text-neutral-800 dark:text-neutral-100">{step.title}</h3>
-                <p className="text-neutral-500 dark:text-neutral-400 text-xs mt-0.5">{step.description}</p>
+                <TextEffect as="h3" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="font-semibold text-sm text-neutral-800 dark:text-neutral-100">{step.title}</TextEffect>
+                <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-neutral-500 dark:text-neutral-400 text-xs mt-0.5">{step.description}</TextEffect>
               </div>
             </div>
           ))}

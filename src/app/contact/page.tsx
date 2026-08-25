@@ -1,4 +1,5 @@
 "use client";
+import { TextEffect } from '@/components/core/text-effect';
 
 import { BreadcrumbSchema } from '@/components/ui/breadcrumb-schema';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
@@ -38,12 +39,12 @@ export default function ContactPage() {
           <span className="inline-block px-3.5 py-1 rounded-full bg-[#5727e7] text-white text-xs font-semibold uppercase tracking-wider">
             GET IN TOUCH
           </span>
-          <h1 className="text-3xl md:text-5xl font-bold font-heading text-white">
+          <TextEffect as="h1" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-3xl md:text-5xl font-bold font-heading text-white">
             Contact Kalaimagal Matriculation School
-          </h1>
-          <p className="text-base md:text-lg text-[#94a3b8] max-w-2xl mx-auto leading-relaxed">
+          </TextEffect>
+          <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-base md:text-lg text-[#94a3b8] max-w-2xl mx-auto leading-relaxed">
             We are here to answer your questions regarding admissions, fees, transport, and campus visits.
-          </p>
+          </TextEffect>
         </div>
       </section>
 
@@ -52,7 +53,7 @@ export default function ContactPage() {
         {/* Contact Details Card */}
         <div className="space-y-8">
           <div className="bg-white p-8 rounded-3xl border border-[#e2e8f0] shadow-sm space-y-6">
-            <h2 className="text-2xl font-bold text-[#0f172a] font-heading">Campus Contact Details</h2>
+            <TextEffect as="h2" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-2xl font-bold text-[#0f172a] font-heading">Campus Contact Details</TextEffect>
             
             <div className="space-y-5">
               <div className="flex items-start gap-4">
@@ -60,8 +61,8 @@ export default function ContactPage() {
                   <MapPin className="w-5 h-5" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-sm text-[#0f172a]">Physical Address</h3>
-                  <p className="text-xs text-[#64748b] mt-1 leading-relaxed">Balammal St, Rajiv Gandhi Nagar, Pattabiram, Chennai 600072</p>
+                  <TextEffect as="h3" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="font-bold text-sm text-[#0f172a]">Physical Address</TextEffect>
+                  <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-xs text-[#64748b] mt-1 leading-relaxed">Balammal St, Rajiv Gandhi Nagar, Pattabiram, Chennai 600072</TextEffect>
                 </div>
               </div>
 
@@ -70,8 +71,8 @@ export default function ContactPage() {
                   <Phone className="w-5 h-5" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-sm text-[#0f172a]">Phone Numbers</h3>
-                  <p className="text-xs text-[#64748b] mt-1">+91 70106 24186 (Primary Desk)</p>
+                  <TextEffect as="h3" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="font-bold text-sm text-[#0f172a]">Phone Numbers</TextEffect>
+                  <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-xs text-[#64748b] mt-1">+91 70106 24186 (Primary Desk)</TextEffect>
                 </div>
               </div>
 
@@ -80,8 +81,8 @@ export default function ContactPage() {
                   <Mail className="w-5 h-5" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-sm text-[#0f172a]">Email Address</h3>
-                  <p className="text-xs text-[#64748b] mt-1">info@kalaimagalmatriculationschool.edu.in</p>
+                  <TextEffect as="h3" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="font-bold text-sm text-[#0f172a]">Email Address</TextEffect>
+                  <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-xs text-[#64748b] mt-1">info@kalaimagalmatriculationschool.edu.in</TextEffect>
                 </div>
               </div>
 
@@ -90,8 +91,8 @@ export default function ContactPage() {
                   <Clock className="w-5 h-5" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-sm text-[#0f172a]">Office Hours</h3>
-                  <p className="text-xs text-[#64748b] mt-1">Monday to Saturday: 8:30 AM – 4:30 PM (Sunday Closed)</p>
+                  <TextEffect as="h3" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="font-bold text-sm text-[#0f172a]">Office Hours</TextEffect>
+                  <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-xs text-[#64748b] mt-1">Monday to Saturday: 8:30 AM – 4:30 PM (Sunday Closed)</TextEffect>
                 </div>
               </div>
             </div>
@@ -111,13 +112,13 @@ export default function ContactPage() {
 
         {/* Message Form */}
         <div className="bg-white p-8 rounded-3xl border border-[#e2e8f0] shadow-sm space-y-6">
-          <h2 className="text-2xl font-bold text-[#0f172a] font-heading">Send Us a Direct Message</h2>
+          <TextEffect as="h2" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-2xl font-bold text-[#0f172a] font-heading">Send Us a Direct Message</TextEffect>
 
           {formSubmitted ? (
             <div className="p-6 bg-[#f0fdf4] border border-[#bbf7d0] rounded-2xl text-center space-y-3">
               <CheckCircle className="w-10 h-10 text-[#16a34a] mx-auto" />
-              <h3 className="font-bold text-lg text-[#15803d]">Message Sent Successfully!</h3>
-              <p className="text-xs text-[#166534]">Thank you for contacting Kalaimagal Matriculation School. Our administrative office will get back to you shortly.</p>
+              <TextEffect as="h3" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="font-bold text-lg text-[#15803d]">Message Sent Successfully!</TextEffect>
+              <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-xs text-[#166534]">Thank you for contacting Kalaimagal Matriculation School. Our administrative office will get back to you shortly.</TextEffect>
               <button onClick={() => setFormSubmitted(false)} className="text-xs font-bold text-[#5727e7] underline mt-2">
                 Send Another Message
               </button>
@@ -204,8 +205,8 @@ export default function ContactPage() {
           <span className="px-3.5 py-1 rounded-full bg-[#5727e7] text-white text-xs font-semibold uppercase">
             REAL CAMPUS LOCATION
           </span>
-          <h2 className="text-2xl md:text-4xl font-bold font-heading text-white">Visit Our Campus</h2>
-          <p className="text-sm text-[#94a3b8] max-w-xl mx-auto">Balammal St, Rajiv Gandhi Nagar, Pattabiram, Chennai 600072</p>
+          <TextEffect as="h2" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-2xl md:text-4xl font-bold font-heading text-white">Visit Our Campus</TextEffect>
+          <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-sm text-[#94a3b8] max-w-xl mx-auto">Balammal St, Rajiv Gandhi Nagar, Pattabiram, Chennai 600072</TextEffect>
           <div className="pt-2">
             <a 
               href="https://maps.google.com/?q=13.12384,80.08109" 
