@@ -27,16 +27,16 @@ export function AnnouncementBar() {
 export function SpatialHeader() {
   return (
     <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-[#e5e7eb] font-body">
-      <div className="max-w-[1200px] mx-auto px-6 h-16 flex items-center justify-between text-sm text-[#030712]">
-        <a href="/" className="hover:opacity-90 transition-opacity"><div className="flex items-center gap-3">
+      <div className="max-w-[1200px] mx-auto px-3 sm:px-6 min-h-[60px] sm:h-16 flex items-center justify-between gap-2 text-sm text-[#030712]">
+        <a href="/" className="hover:opacity-90 transition-opacity min-w-0 shrink"><div className="flex items-center gap-2.5 min-w-0">
           <div className="w-9 h-9 rounded-xl bg-[#5727e7] text-white flex items-center justify-center font-bold font-heading shadow-sm">
             K
           </div>
-          <div>
-            <span className="font-bold text-base text-[#030712] font-heading tracking-tight block">
+          <div className="min-w-0">
+            <span className="font-bold text-xs sm:text-base text-[#030712] font-heading tracking-tight block truncate max-w-[160px] xs:max-w-[240px] sm:max-w-none">
               Kalaimagal Matriculation School
             </span>
-            <span className="text-[11px] text-[#4b5563] block -mt-1 font-medium">Matriculation Campus</span>
+            <span className="text-[10px] sm:text-[11px] text-[#4b5563] block -mt-0.5 font-medium truncate">Matriculation Campus</span>
           </div>
         </div></a>
 
@@ -49,11 +49,11 @@ export function SpatialHeader() {
           <a href="/contact" className="whitespace-nowrap hover:text-[#5727e7] transition-colors">Connect</a>
         </nav>
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2 shrink-0">
           <StarfieldButton
             label="Apply Now"
             link="/apply"
-            padding="8px 20px 8px 20px"
+            padding="6px 14px 6px 14px"
             font={{ fontSize: 14, fontWeight: 700 }}
             colors={{ fill: "#5727e7", textColor: "#ffffff" }}
             stroke={{ color: "#8169ff", count: 1, size: 70, speed: 50 }}
