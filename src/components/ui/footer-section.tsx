@@ -1,138 +1,106 @@
 'use client';
-import { TextEffect } from '@/components/core/text-effect';
-
 import React from 'react';
-import type { ComponentProps, ReactNode } from 'react';
-import { motion, useReducedMotion } from 'framer-motion';
-import { FacebookIcon, InstagramIcon, LinkedinIcon, YoutubeIcon, GraduationCap } from 'lucide-react';
-
-interface FooterLink {
-  title: string;
-  href: string;
-  icon?: React.ComponentType<{ className?: string }>;
-}
-
-interface FooterSection {
-  label: string;
-  links: FooterLink[];
-}
-
-const footerLinks: FooterSection[] = [
-  {
-    label: 'Academics',
-    links: [
-      { title: 'Primary Stage', href: '/academics' },
-      { title: 'Middle School', href: '/academics' },
-      { title: 'High School Board', href: '/academics' },
-      { title: 'Hr. Sec. Streams', href: '/academics' },
-    ],
-  },
-  {
-    label: 'Campus Life',
-    links: [
-      { title: 'About Us', href: '/about' },
-      { title: 'Campus Facilities', href: '/facilities' },
-      { title: 'Photo Gallery', href: '/gallery' },
-      { title: 'Parent Reviews', href: '/#testimonials' },
-    ],
-  },
-  {
-    label: 'Admissions',
-    links: [
-      { title: 'Admission Inquiry', href: '/contact' },
-      { title: 'Curriculum Guide', href: '/academics' },
-      { title: 'Campus Location', href: '/contact' },
-      { title: 'Contact Office', href: '/contact' },
-    ],
-  },
-  {
-    label: 'Social Links',
-    links: [
-      { title: 'Facebook', href: '#', icon: FacebookIcon },
-      { title: 'Instagram', href: '#', icon: InstagramIcon },
-      { title: 'Youtube', href: '#', icon: YoutubeIcon },
-      { title: 'LinkedIn', href: '#', icon: LinkedinIcon },
-    ],
-  },
-];
+import { TextEffect } from '@/components/core/text-effect';
+import { GraduationCap, MapPin, Phone, Mail } from 'lucide-react';
+import Link from 'next/link';
 
 export function Footer() {
-  return (
-    <footer className="relative w-full max-w-7xl mx-auto flex flex-col items-center justify-center rounded-t-3xl border-t border-[#e5e7eb] bg-[#f9fafb] px-6 py-12 lg:py-16 font-body text-[#4b5563]">
-      <div className="bg-[#5727e7]/30 absolute top-0 right-1/2 left-1/2 h-px w-1/3 -translate-x-1/2 -translate-y-1/2 rounded-full blur" />
+  const schoolName = "Kalaimagal Matriculation School".replace("dav-matriculation-higher-secondary-school---avadi (2)", "DAV Matriculation Higher Secondary School");
 
-      <div className="grid w-full gap-8 xl:grid-cols-3 xl:gap-8">
-        <AnimatedContainer className="space-y-4">
-          <div className="flex items-center gap-3">
-            <div className="p-2 rounded-xl bg-[#5727e7] text-white shadow-sm">
-              <GraduationCap className="size-6" />
+  return (
+    <footer className="w-full bg-[#0a0f1d] text-slate-300 font-body relative overflow-hidden pt-16 pb-12 border-t border-slate-800">
+      <div 
+        className="absolute top-0 left-0 right-0 h-1"
+        style={{ backgroundColor: "#5727e7" }}
+      />
+
+      <div className="max-w-[1280px] mx-auto px-4 sm:px-6 md:px-8 space-y-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10">
+          
+          <div className="lg:col-span-5 space-y-5">
+            <div className="flex items-center gap-3">
+              <div 
+                className="w-11 h-11 rounded-xl flex items-center justify-center font-bold text-white shadow-md shrink-0"
+                style={{ backgroundColor: "#5727e7" }}
+              >
+                <GraduationCap className="w-6 h-6 text-white" />
+              </div>
+              <div>
+                <span className="font-extrabold text-lg text-white font-heading tracking-tight block">
+                  {schoolName}
+                </span>
+                <span className="text-xs text-slate-400 font-medium">Matriculation Academic Campus</span>
+              </div>
             </div>
-            <div>
-              <span className="font-bold text-base md:text-lg text-[#030712] font-heading tracking-tight block">
-                Kalaimagal Matriculation School
-              </span>
-              <span className="text-xs text-[#4b5563] font-medium">Matriculation Campus</span>
+
+            <TextEffect 
+              as="p" 
+              preset="fade-in-blur" 
+              speedReveal={1.1} 
+              speedSegment={0.3} 
+              className="text-xs md:text-sm text-slate-400 leading-relaxed max-w-md font-body"
+            >
+              Nurturing academic mastery, character discipline, and confidence in every student through structured Matriculation education.
+            </TextEffect>
+
+            <div className="flex items-center gap-3 text-xs text-slate-400 font-medium pt-2">
+              <MapPin className="w-4 h-4 shrink-0" style={{ color: "#5727e7" }} />
+              <span>State Board Recognized Institution, Tamil Nadu</span>
             </div>
           </div>
-          <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-xs md:text-sm text-[#4b5563] leading-relaxed max-w-sm">
-            Building Character. Shaping Futures. Delivering structured, values-based Matriculation education with dedicated teachers and safe campus facilities.
-          </TextEffect>
-          <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-xs text-[#4b5563] mt-4">
-            © {new Date().getFullYear()} Kalaimagal Matriculation School. All rights reserved.
-          </TextEffect>
-        </AnimatedContainer>
 
-        <div className="mt-10 grid grid-cols-2 gap-8 md:grid-cols-4 xl:col-span-2 xl:mt-0">
-          {footerLinks.map((section, index) => (
-            <AnimatedContainer key={section.label} delay={0.1 + index * 0.1}>
-              <div className="mb-8 md:mb-0">
-                <TextEffect as="h3" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-xs font-bold uppercase tracking-wider text-[#030712] font-heading">
-                  {section.label}
-                </TextEffect>
-                <ul className="mt-4 space-y-2.5 text-xs md:text-sm text-[#4b5563]">
-                  {section.links.map((link) => (
-                    <li key={link.title}>
-                      <a
-                        href={link.href}
-                        className="hover:text-[#5727e7] inline-flex items-center transition-all duration-200"
-                      >
-                        {link.icon && <link.icon className="me-1.5 size-4" />}
-                        {link.title}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
+          <div className="lg:col-span-3 space-y-4">
+            <h4 className="text-sm font-extrabold uppercase tracking-widest text-white font-heading">
+              Quick Links
+            </h4>
+            <ul className="space-y-2.5 text-xs md:text-sm text-slate-400">
+              <li><Link href="#academics" className="hover:text-white transition-colors">Academic Structure</Link></li>
+              <li><Link href="#gallery" className="hover:text-white transition-colors">Campus Gallery</Link></li>
+              <li><Link href="#testimonials" className="hover:text-white transition-colors">Parent Reviews</Link></li>
+              <li><Link href="#faqs" className="hover:text-white transition-colors">Admissions FAQ</Link></li>
+              <li><Link href="#connect" className="hover:text-white transition-colors">Admissions Inquiry Desk</Link></li>
+            </ul>
+          </div>
+
+          <div className="lg:col-span-4 space-y-4">
+            <h4 className="text-sm font-extrabold uppercase tracking-widest text-white font-heading">
+              Admissions Desk
+            </h4>
+            <div className="p-5 rounded-xl bg-slate-900/80 border border-slate-800 space-y-3">
+              <div className="flex items-center gap-3 text-xs text-slate-300">
+                <Phone className="w-4 h-4 shrink-0" style={{ color: "#5727e7" }} />
+                <span>+91 98401 55667 Desk Enquiries</span>
               </div>
-            </AnimatedContainer>
-          ))}
+              <div className="flex items-center gap-3 text-xs text-slate-300">
+                <Mail className="w-4 h-4 shrink-0" style={{ color: "#5727e7" }} />
+                <span>admissions@school-edu.in</span>
+              </div>
+              <div className="pt-2">
+                <a
+                  href="#connect"
+                  className="inline-flex items-center justify-center w-full py-2.5 rounded-xl text-xs font-bold transition-all duration-200 shadow-sm"
+                  style={{
+                    backgroundColor: "#5727e7",
+                    color: "#ffffff"
+                  }}
+                >
+                  Apply for Admission
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div className="pt-8 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+          <p>© {new Date().getFullYear()} {schoolName}. All rights reserved.</p>
+          <div className="flex items-center gap-6">
+            <span>Matriculation Board</span>
+            <span>State Syllabus</span>
+            <span>Quality Education</span>
+          </div>
         </div>
       </div>
     </footer>
-  );
-}
-
-type ViewAnimationProps = {
-  delay?: number;
-  className?: ComponentProps<typeof motion.div>['className'];
-  children: ReactNode;
-};
-
-function AnimatedContainer({ className, delay = 0.1, children }: ViewAnimationProps) {
-  const shouldReduceMotion = useReducedMotion();
-
-  if (shouldReduceMotion) {
-    return children;
-  }
-
-  return (
-    <motion.div
-      initial={{ filter: 'blur(4px)', translateY: -8, opacity: 0 }}
-      whileInView={{ filter: 'blur(0px)', translateY: 0, opacity: 1 }}
-      viewport={{ once: true }}
-      transition={{ delay, duration: 0.8 }}
-      className={className}
-    >
-      {children}
-    </motion.div>
   );
 }
